@@ -20,7 +20,7 @@ makeRows(size);
 
 addBtn.addEventListener('click', function changeRows() {
     size = parseInt(textBox.value);
-    if (1 < size) {
+    if (size < 100) {
         container.innerHTML = ''; 
         makeRows(size);
     } else {
