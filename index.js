@@ -19,11 +19,11 @@ const makeRows = (size) => {
 makeRows(size);
 
 addBtn.addEventListener('click', function changeRows() {
-    let newSize = parseInt(textBox.value);
-    if (2 >= newSize <= 100 ) {
+    size = parseInt(textBox.value);
+    if (1 < size) {
         container.innerHTML = ''; 
-        makeRows(newSize);
+        makeRows(size);
     } else {
-        console.log('error')
+        console.log('error');
     }
 })
