@@ -1,6 +1,7 @@
 const container = document.querySelector(".container");
 const addBtn = document.querySelector('.add');
 const textBox = document.getElementById('textBox');
+const resetBtn = document.querySelector('.reset');
 let size = 32;
 
 const makeRows = (size) => {
@@ -15,15 +16,16 @@ const makeRows = (size) => {
         container.appendChild(cell).className = "grid-item";
     }
 }
-
-makeRows(size);
-
 addBtn.addEventListener('click', function changeRows() {
     size = parseInt(textBox.value);
     if (1 < size && size <= 100) {
-        container.innerHTML = ''; 
+        container.innerHTML = '';        
         makeRows(size);
     } else {
         console.log('error');
     }
 })
+
+makeRows(size);
+
+
